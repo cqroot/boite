@@ -1,28 +1,24 @@
 <template>
   <div id="page-unixtimestamp" class="page-content">
     <a-row>
-      <a-col :span="5"></a-col>
-      <a-col :span="2"
+      <a-col :span="7"
         ><div style="text-align: right; padding-right: 10px; line-height: 40px">
           Unix Timestamp:
         </div>
       </a-col>
       <a-col :span="5">
-        <a-input style="height: 40px" v-model="timestampToConvert"
-      /></a-col>
-      <a-col :span="2"
+        <a-input style="height: 40px" v-model="timestampToConvert"></a-input>
+      </a-col>
+      <a-col :span="6" style="white-space: nowrap"
         ><a-button
           type="primary"
-          style="height: 40px; width: calc(100% - 20px); margin: 0 10px"
+          style="height: 40px; width: 90px; margin: 0 10px"
           @click="timestampToTime"
         >
           convert
         </a-button>
-      </a-col>
-      <a-col :span="5">
-        <a-input style="height: 40px" v-model="convertedTime"
+        <a-input style="height: 40px" compact v-model="convertedTime"
       /></a-col>
-      <a-col :span="5"></a-col>
     </a-row>
   </div>
 </template>
