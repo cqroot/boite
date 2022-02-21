@@ -1,11 +1,11 @@
 <template>
-  <div id="page-bytecalc">
+  <div id="page-bytecalc" class="page-content">
     <a-row
       v-for="item in byteData"
       :key="item.name"
       style="margin-bottom: 10px; height: 40px"
     >
-      <a-col :span="8">
+      <a-col :span="7">
         <div style="text-align: right; padding-right: 10px; line-height: 40px">
           {{ item.text }}:
         </div>
@@ -21,7 +21,7 @@
     </a-row>
 
     <a-row>
-      <a-col :span="8"></a-col>
+      <a-col :span="7"></a-col>
       <a-col :span="12">
         <a-button
           type="primary"
@@ -120,15 +120,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-#page-bytecalc {
-  width: 100%;
-  min-width: 350px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-</style>
