@@ -12,7 +12,7 @@
       <a-col :span="6" style="white-space: nowrap"
         ><a-button
           type="primary"
-          style="height: 40px; width: 90px; margin: 0 10px"
+          style="height: 32px; width: 90px; margin: 0 10px"
           @click="timestampToTime"
         >
           convert
