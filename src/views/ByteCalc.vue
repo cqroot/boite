@@ -82,6 +82,8 @@ export default {
       this.currentValue = value;
     },
     calculate(name, value) {
+      value = value.replace(/[, ]/g, "");
+      console.log(value);
       switch (name) {
         case "bit":
           break;
