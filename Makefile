@@ -1,9 +1,8 @@
 PROC_NAME = boite
 
 .PHONY: build
-build:
+build: clean
 	pyinstaller -w '$(PROC_NAME)/__main__.py' -n '$(PROC_NAME)'
-	# pyinstaller '$(PROC_NAME).spec'
 
 .PHONY: run
 run:
@@ -13,6 +12,8 @@ run:
 clean:
 	rm -rf '$(CURDIR)/build/'
 	rm -rf '$(CURDIR)/dist/'
+	find '$(CURDIR)/$(PROC_NAME)/' -type d -prune -name __pycache__ -exec rm -rf {} \;
+	find '$(CURDIR)/$(PROC_NAME)/' -type f        -name *.pyc       -exec rm -f  {} \;
 
 .PHONY: requirements
 requirements:
